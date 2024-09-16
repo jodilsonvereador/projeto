@@ -154,13 +154,13 @@
 </head>
 <body>
 
-    <!-- Menu Icon -->
+<!-- Menu Icon -->
 <button class="menu-icon">
   <span class="material-icons">menu</span>
 </button>
 
 <!-- Navbar Structure -->
-<nav class="navbar">
+<nav class="navbar" id="menu">
   <a class="menu-item" href="#security">Segurança</a>
   <a class="menu-item" href="#sports">Esportes</a>
   <a class="menu-item" href="#environment">Meio Ambiente</a>
@@ -462,10 +462,19 @@
         </div>
     </footer>
     <script>
+        const menu = document.getElementById('menu');
+
         // JavaScript to toggle the navbar on menu icon click
         document.querySelector('.menu-icon').addEventListener('click', function() {
         document.querySelector('.navbar').classList.toggle('active');
         });
+        // Close the menu when clicking outside of it
+        function closeMenuOnClickOutside(event) {
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove('open');
+            }
+        }
+        document.addEventListener('click', closeMenuOnClickOutside);
     </script>
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
