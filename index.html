@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proposta de Governo - Jodilson Bozó para Vereador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Material Icons -->
@@ -32,19 +33,41 @@
      <style>
     /* Navbar initial state: off the screen */
     .navbar {
-      position: fixed;
-      top: 0;
-      left: -100vw; /* Hide it off the screen to the left */
-    width: 300px;
-    height: auto;
-      background-color: #343a40;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      z-index: 9999;
-      transition: left 0.7s ease; /* Smooth transition for sliding effect */
+        position: fixed;
+        top: 0;
+        left: -100vw; /* Hide it off the screen to the left */
+        width: 300px;
+        height: auto;
+        background-color: #343a40;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 9999;
+        transition: left 0.7s ease; /* Smooth transition for sliding effect */
+        padding: 10px 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .menu-item {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: bold;
+      text-transform: capitalize; /* Capitalized text */
+      color: #bc0909; /* Red text color */
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: box-shadow 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    }
+     /* Hover effect for the menu items */
+    .menu-item:hover {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow highlight on hover */
+      color: #b80000; /* Darker red color on hover */
     }
 
+    /* Active menu item style */
+    .menu-item.active {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add subtle text shadow */
+    }
     /* Show navbar when toggled */
     .navbar.active {
       left: 0;
@@ -140,11 +163,11 @@
 
 <!-- Navbar Structure -->
 <nav class="navbar">
-  <a href="#security">Segurança</a>
-  <a href="#sports">Esportes</a>
-  <a href="#environment">Meio Ambiente</a>
-  <a href="#participation">Participação Popular</a>
-  <a href="#contact">Contato</a>
+  <a class="menu-item" href="#security">Segurança</a>
+  <a class="menu-item" href="#sports">Esportes</a>
+  <a class="menu-item" href="#environment">Meio Ambiente</a>
+  <a class="menu-item" href="#participation">Participação Popular</a>
+  <a class="menu-item" href="#contact">Contato</a>
 </nav>
 
     <!-- Introduction Section -->
