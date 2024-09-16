@@ -8,6 +8,26 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Custom Card CSS-->
+    <style>
+    .card {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+      transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .card-body {
+      font-size: 1rem;
+    }
+  </style>
     <!-- Custom CSS for navbar-->
      <style>
     /* Navbar initial state: off the screen */
@@ -15,8 +35,8 @@
       position: fixed;
       top: 0;
       left: -100vw; /* Hide it off the screen to the left */
-      width: 100vw;
-      height: 70px;
+    width: 300px;
+    height: auto;
       background-color: #343a40;
       display: flex;
       justify-content: space-around;
@@ -152,15 +172,45 @@
             <h3 class="mt-3">Eixo de Segurança Pública</h3>
         </div>
     </div>
-
-    <div class="container py-5">
-        <p>Foco na valorização dos servidores, melhoria da infraestrutura, e políticas de integração comunitária.</p>
-        <ul>
-            <li>Reativação da Associação dos Servidores Penitenciários de Jequié</li>
-            <li>Melhoria nas condições de trabalho e infraestrutura</li>
-            <li>Equipamentos e tecnologia avançada para segurança</li>
-        </ul>
+<div class="container my-5">
+  <div class="row">
+    <!-- Card A -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Criação e Regulamentação da Secretaria Municipal de Meio Ambiente</h5>
+          <p class="card-text">
+            Criar e regulamentar uma Secretaria Municipal de Meio Ambiente, com a responsabilidade de coordenar políticas públicas voltadas à preservação ambiental, educação ambiental, fiscalização e emissão de licenças. A secretaria terá o papel de planejar e implementar ações estratégicas para o desenvolvimento sustentável, garantindo que o crescimento urbano e econômico da cidade respeite o meio ambiente.
+          </p>
+        </div>
+      </div>
     </div>
+    
+    <!-- Card B -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Negociação de Contrapartidas em Licenças Ambientais</h5>
+          <p class="card-text">
+            Negociar com empresas e empreendimentos que solicitarem licenças ambientais no município para que forneçam contrapartidas que beneficiem a comunidade e o meio ambiente, como o reflorestamento, manutenção de áreas verdes, e projetos de reciclagem. Essas contrapartidas podem incluir ações de mitigação dos impactos ambientais causados pelos empreendimentos e melhorias na infraestrutura verde da cidade.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Card C -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Autonomia nos Processos Regionais de Fiscalização e Licenciamento</h5>
+          <p class="card-text">
+            Trabalhar junto aos governos estadual e federal para que Jequié tenha maior autonomia nos processos de fiscalização, licenciamento e inspeção ambiental, permitindo que a cidade possa gerir seus próprios processos ambientais com mais eficiência e rapidez. Isso inclui a criação de um corpo técnico qualificado dentro da Secretaria de Meio Ambiente para conduzir inspeções, emitir licenças e fiscalizar o cumprimento das normas ambientais diretamente no município, sem depender exclusivamente de órgãos estaduais.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- Parallax Divider for Esportes -->
     <div class="parallax-section" style="background-image: url('https://i.imgur.com/olJ4oQr.png'); background-attachment: fixed; background-size: cover; background-position: center;">
