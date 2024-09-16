@@ -8,7 +8,55 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- Custom CSS for navbar-->
+     <style>
+    /* Navbar initial state: off the screen */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: -100vw; /* Hide it off the screen to the left */
+      width: 100vw;
+      height: 70px;
+      background-color: #343a40;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 9999;
+      transition: left 0.7s ease; /* Smooth transition for sliding effect */
+    }
+
+    /* Show navbar when toggled */
+    .navbar.active {
+      left: 0;
+    }
+
+    /* Menu icon styling */
+    .menu-icon {
+      font-size: 30px;
+      color: #343a40;
+      background: #fff;
+      border: none;
+      cursor: pointer;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 10000;
+    }
+
+    /* Navbar links styling */
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 10px 15px;
+      text-transform: uppercase;
+    }
+
+    .navbar a:hover {
+      background-color: #495057;
+      border-radius: 5px;
+    }
+  </style>
     <!-- Custom CSS for Parallax -->
 <style>
     .parallax-section {
@@ -65,21 +113,19 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">Proposta de Governo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#introducao">Introdução</a></li>
-                <li class="nav-item"><a class="nav-link" href="#eixos">Eixos Prioritários</a></li>
-                <li class="nav-item"><a class="nav-link" href="#participacao">Participação Popular</a></li>
-                <li class="nav-item"><a class="nav-link" href="#conclusao">Considerações Finais</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Menu Icon -->
+<button class="menu-icon">
+  <span class="material-icons">menu</span>
+</button>
+
+<!-- Navbar Structure -->
+<nav class="navbar">
+  <a href="#security">Segurança</a>
+  <a href="#sports">Esportes</a>
+  <a href="#environment">Meio Ambiente</a>
+  <a href="#participation">Participação Popular</a>
+  <a href="#contact">Contato</a>
+</nav>
 
     <!-- Introduction Section -->
     <section id="introducao" class="section">
@@ -344,7 +390,12 @@
             <p>&copy; 2024 Jodilson Bozó - Todos os direitos reservados</p>
         </div>
     </footer>
-
+    <script>
+        // JavaScript to toggle the navbar on menu icon click
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+        document.querySelector('.navbar').classList.toggle('active');
+        });
+    </script>
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
