@@ -470,8 +470,8 @@
         });
         // Close the menu when clicking outside of it
         function closeMenuOnClickOutside(event) {
-            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-                menu.classList.remove('open');
+            if (!menu.contains(event.target)) {
+                menu.classList.remove('active');
             }
         }
         document.addEventListener('click', closeMenuOnClickOutside);
